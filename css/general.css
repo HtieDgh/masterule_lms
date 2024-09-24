@@ -1,0 +1,326 @@
+body{
+	font-family: Arial, Helvetica, sans-serif;
+    background: #f59e4c; /*old*/
+    
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size:cover;	
+    -webkit-background-size:cover;
+}
+::selection {
+	background-color: #cf644e;
+	color: white;
+	text-shadow: none;
+}
+.mr_r_10{
+    margin-right:10px ;
+}
+.italyc{
+    font-style:italic;
+    }
+    .ClearFix {
+        width: 1300px;
+        margin: 0 auto;
+    }
+    @media(max-width:1300px){
+        .ClearFix{
+            width: 98%;
+        }
+    }
+    .alert_txt{
+        color: red;
+    }
+    .good_txt{
+        color:green;
+    }
+
+/*Шапка*/
+header {
+    position: fixed;
+    border-bottom: 5px solid red;
+    background: white;
+    width: 100%;
+    z-index: 100;
+}
+    .header_line{
+        margin:12px 10px;
+    }
+ 
+    .head_txt{
+        font-size: 1.8em;
+        color:#cf2323;
+        font-weight: bold;
+        width: 490px;
+        text-align: center;
+    }
+/*Конец Шапка*/
+.Pacifico_txt{
+	font-family: 'Pacifico', sans-serif;
+}
+.logo_full{
+    width:460px;
+    
+}
+    .logo_short{
+        display: none;
+        width: 100px;
+    }
+    
+.EnterBtn{
+    width:320px;
+    height:50px;
+    font-size:16px;
+    border:none;
+    background-color:rgb(124, 161, 43);
+    color:white;
+    font-weight: bold;
+}
+/*Кнопки декорированые*/
+.page_block{
+    box-sizing: border-box;
+    background-color: white;
+    text-align: center;
+}
+@media(max-width:590px){
+    .page_block .prof_op_btn{
+        box-sizing: border-box;
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+    .page_block>p{
+        margin: 5px auto;
+    }
+.page_block_wrap{	
+    background:white ;
+    margin:20px auto 0;
+    padding:10px 10px;
+    border-radius:5px;
+    box-shadow: 0 3px 2px rgba(0,0,0,0.4);
+    box-sizing: border-box;
+}
+.page_nums,.page_nums_rev,.rounded_red_rev{
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 0.2em;
+    border-radius:10px;
+    padding: 0.5em;
+    border: 2px solid rgb(124, 161, 43);
+    font-weight: bold;
+}
+    .page_nums{
+        background-color: rgb(124, 161, 43);
+        color: white;
+    }
+    .page_nums_rev{
+        border: 2px solid rgb(124, 161, 43);
+    }
+    .rounded_red_rev:hover,.page_nums:hover,.page_nums_rev,.EnterBtn:hover{
+        color:  rgb(124, 161, 43);
+        background-color:white;
+        transition: all 200ms ;
+
+    }
+
+    .page_nums_rev:hover{
+        color:white;
+        background-color:rgb(124, 161, 43);
+    }
+    .rounded_red_rev{
+        text-align: center;
+        background-color: white;
+        color: #dd2929;
+        border:2px solid #dd2929;
+        font-weight: bold;
+    }
+        .rounded_red_rev:hover {
+            color: white;
+            background-color: #dd2929;
+        }
+.invis{
+    visibility: hidden;
+}
+/*Курсы*/
+.course_block{
+    max-width: 28%;
+    transition: 200ms;
+}
+.course_block:hover{
+    
+    box-shadow: 4px 8px 4px rgba(0,0,0,0.4);
+}
+.inner_cont_block{
+    padding:0 5px;
+    width: 100%;
+}
+/*Навигация*/
+.nav_wrap{
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+
+	z-index:1001;
+}
+.nav {
+width: 300px;
+right: 0;
+position: fixed;
+display: block;
+background: white;
+top:100px;
+z-index:1002;
+box-shadow: 0 2px 5px #222;
+border-radius: 15px;
+}
+.nav li{
+	border-radius: 20px;
+	box-sizing:border-box;
+	border-bottom:1px solid lightgray;
+	font-size:2em;
+	padding:1em 0;
+	text-align: center;
+	/*font-weight: bold;*/
+	font-family: 'Pacifico', sans-serif;
+	display:block;
+}
+.nav  a,.console_wrap a{
+	padding: 0.5em;
+	margin:0  0.5em;
+	
+	border-radius:15px ;
+	display: block;
+	text-decoration: none;
+	background-color: #dd2929;
+	color: #f3f3f3;
+	border:2px solid #dd2929;
+
+}
+.console_wrap a{
+	padding: 0.7em;
+}
+.nav li a:hover ,.console_wrap a:hover{
+	color: #dd2929;
+	background: none;
+	transition:all 400ms;
+}
+
+/*===========Бургер меню==================*/
+.menu-btn-wrap{
+	width: 460px;
+}
+.menu-btn {
+	display: block;
+	width: 50px;
+	height: 50px;
+	background-color: #dd2929;
+	border-radius: 15px;
+	position: relative;
+	right:0;
+	z-index: 1002;
+	border: 2px solid #dd2929;
+	box-sizing: border-box;
+  }
+  
+.menu-btn span,
+.menu-btn span::before,
+.menu-btn span::after {
+  position: absolute;
+  top: 50%; margin-top: -1px;
+  left: 50%; margin-left: -10px;
+  width: 20px;
+  height: 2px;
+  background-color: #222;
+}
+.menu-btn span::before,
+.menu-btn span::after,.menu-btn {
+  content: '';
+  display: block;
+  transition:all 0.2s;
+}
+.menu-btn span::before {
+	transform: translateY(-5px);
+  }
+  .menu-btn span::after {
+	transform: translateY(5px);
+  }
+  /*При наведении*/
+.menu-btn:hover span::before {
+transform: translateY(-8px);
+}
+.menu-btn:hover span::after {
+transform: translateY(8px);
+}
+
+/*Нажатое состояние*/
+.menu-btn_active {
+	background:none;
+  }
+.menu-btn_active span:before,
+.menu-btn_active:hover span:before  {
+	transform: rotate(-45deg);
+  }
+  .menu-btn_active span:after,
+  .menu-btn_active:hover span:after  {
+	transform: rotate(45deg);
+  }
+
+  .menu-btn_active span{
+	height: 0;
+  }
+/*===================Конец Бургер меню=================*/
+/*Записи - комментарии*/
+.cmnt_block{
+    display: none;
+}
+/*Фото и файлы*/
+.files_img{
+    vertical-align: middle;
+}
+/*профили*/
+#send_ava_btn{
+    display: none;
+}
+.author_stats{
+    margin-bottom:0.3em;
+}
+.ava_img{
+    width: 180px;
+    height: 180px;
+    display: block;
+    border-radius:50%;
+    overflow: hidden;
+    
+}
+.ava_img img{
+    width:100%;
+    height: 100%;
+}
+.ava_prof_block .ava_img{
+    /*Размер как на youtube*/
+    width:136px;
+    height: 136px;
+}
+/*Контент*/
+    .content {
+        overflow: hidden;
+        color: #484848;
+        min-height: calc(100vh - 201px);
+        width: 100%;
+        padding-top: 100px;
+    }
+/*подвал*/
+footer {
+	text-align:right;
+	margin-top: 20px;
+	padding:30px 10px;
+	background-color: white;
+	border-top:5px solid red ;
+	width: 100%;
+    box-sizing: border-box;
+}
+footer p{
+font-style:italic;
+}

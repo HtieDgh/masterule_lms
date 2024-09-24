@@ -1,0 +1,406 @@
+@import url("general.css");
+@import url("flexable.css");
+
+/*===========Бургер меню==================*/
+
+/*расписание*/
+.mon_name{
+	font-size:2em ;
+	text-align: center;
+	width: 150px;
+
+}
+/*Конец расписание*/
+/*=======Страница с фото / файлами======*/
+.photos_block,.files_block,.video_block{
+	overflow-y:auto;
+	overflow-x:hidden ;
+}
+.files_block,.video_block{
+	max-height: 50vh;
+}
+.photos_block{
+	height: 80vh;
+}
+.photos_block_l{
+	max-height: 50vh;
+}
+.files_img{
+	max-width: 25%;
+
+}
+.exposed{
+	border: 5px solid #dd2929;
+	box-sizing: border-box;
+}
+
+.photo_wrap{
+	margin-top:20px ;
+	max-height:20vh;
+}
+#open_full_img{
+	position: absolute;
+	top: 20px;
+	z-index: 1001;
+	width: 100%;
+	transition: all 400ms;
+	border: 4px solid rgb(124, 161, 43);
+	box-sizing: border-box;
+	display: none;
+}
+/*========КонецСтраница с фото / файлами======*/
+
+
+/*==== левый болк======*/
+.photo_del,.file_del,.video_del{
+	visibility: hidden;
+	display: block;
+}
+
+/*=========Форма обратной связи========*/
+
+.decor {
+	position: relative;
+	max-width: 800px;
+	margin: 20px auto 0;
+	background: white;
+	border-radius: 30px;
+	
+  }
+  .form-left-decoration,
+  .form-right-decoration {
+	content: "";
+	position: absolute;
+	width: 50px;
+	height: 20px;
+	background: #f59e4c;
+	border-radius: 20px;
+  }
+  .form-left-decoration {
+	bottom: 60px;
+	left: -30px;
+  }
+  .form-right-decoration {
+	top: 60px;
+	right: -30px;
+  }
+  .form-left-decoration:before,
+  .form-left-decoration:after,
+  .form-right-decoration:before,
+  .form-right-decoration:after {
+	content: "";
+	position: absolute;
+	width: 50px;
+	height: 20px;
+	border-radius: 30px;
+	background: white;
+  }
+  .form-left-decoration:before {top: -20px;}
+  .form-left-decoration:after {
+	top: 20px;
+	left: 10px;
+  }
+  .form-right-decoration:before {
+	top: -20px;
+	right: 0;
+  }
+  .form-right-decoration:after {
+	top: 20px;
+	right: 10px;
+  }
+  .circle {
+	position: absolute;
+	bottom: 80px;
+	left: -55px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: white;
+  }
+  label:hover{
+	border-bottom:1px solid red ;
+  }
+  .form-inner {padding: 50px;}
+  .form-inner input,
+  .form-inner textarea,.insert_fl {
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0 20px;
+	margin-bottom: 10px;
+	background: #E9EFF6;
+	line-height: 1.2em;
+	border-width: 0;
+	border-radius: 20px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1em;
+	border: 4px solid transparent;
+  }
+  .file_in{
+	max-width: 350px;
+  }
+  .form-inner input[name="note_title"],
+  .form-inner input[name="note_date"]{
+	font-size: 1.2em;
+  }
+	.form-inner input:focus,
+	.form-inner textarea:focus{
+		outline: none;
+		border: 4px solid rgb(124, 161, 43);
+	}
+
+  .form-inner input[type="submit"],.insert_fl {
+	width: 50%;
+	margin-top: 30px;
+	background: rgb(255, 255, 255);
+	border: 4px solid rgb(124, 161, 43);
+	color: rgb(124, 161, 43);
+	
+	font-weight: bold;
+	align-self: flex-end;
+  }
+		.form-inner input[type="submit"]:hover,.insert_fl:hover{
+			background: rgb(124, 161, 43);
+			color:white;
+			transition: all 200ms;
+		} 
+  .form-inner textarea {resize: none;}
+  .form-inner h3 {
+	margin-top: 0;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	font-size: 24px;
+	color: #707981;
+  }
+  #private{
+	  display: inline-block;
+	  width: auto;
+  }
+  /*=========Конец Форма обратной связи========*/
+/*Заметки*/
+hr{
+	border-color: rgb(124, 161, 43);
+	border-width:2px ;
+}
+.note hr {
+	border-color: lightgrey;
+	border-width:1px ;
+}
+.note,.comment{
+	display: block;
+	position: relative;
+	box-sizing: border-box;
+	background:white ;
+	margin:20px 0;
+	overflow: hidden;
+	width: 100%;
+
+	padding:10px 20px;
+	border-radius:5px;
+	box-shadow: 0 3px 2px rgba(0,0,0,0.4);
+}
+
+
+/*======Контролеры под заметкой=======*/
+
+		.note_cntrl_btn,
+		.note_cntrl_btn:visited,
+		.note_cntrl_btn:link{
+			color:rgb(124, 161, 43);
+			text-decoration: underline;
+		}
+		.note_cntrl_btn:active{
+			color:rgb(161, 43, 43);
+		}
+		.note_new_comment{
+			display: inline-block;
+			padding-top: .5em;
+		}
+/*=======Контролеры под заметкой======*/
+.rasp_les{
+	max-width: 200px;
+	margin:1%;
+	border: 2px solid rgb(124, 161, 43);
+	box-shadow: none;
+}
+.note_title{
+	margin: 8px 0;
+	font-weight: bold;
+}
+/*====  Редактор======*/
+.left_block{
+	width:50%;
+	margin-right:20px ;
+}
+.left_block .decor{
+max-width: 100%;
+}
+.right_block{
+	width:40%;
+}
+.insert_fl{
+	display: none;
+	text-decoration: none;
+	text-align: center;
+}
+.artcl_block{
+	font-size: 1.2em;
+}
+/*==== Конец Редактор======*/
+
+
+
+
+/*===========Бургер меню==================*/
+
+/*===================Конец Бургер меню=================*/
+
+.upl_fl_wrap{
+	margin-top: 20px;
+}
+.upl_fl{
+	width:28% ;
+	text-align: center;
+	font-weight: bold;
+}
+/*======Модальное окно=======*/
+.my_window{
+	z-index: 200;
+	display: none;
+	position: fixed;
+	right: 2%;
+	bottom: 2%;
+	background-color: #e4e4e4;
+	border: 5px solid rgb(124, 161, 43);
+	/*transform:translate(-50%,-50%);*/
+	-webkit-animation-name: animatetop;
+	-webkit-animation-duration: 0.4s;
+	animation-name: animatetop;
+	animation-duration: 0.4s;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	border-radius: 5px;
+	padding-bottom: 6px;
+}
+.my_window .close {
+	display: block;
+	width: 30px;
+	height: 30px;
+	font-size: 30px;
+}
+	@-webkit-keyframes animatetop {
+		from {bottom: -20%;; opacity:0} 
+		to {bottom: 2%;; opacity:1}
+	}
+
+	@keyframes animatetop {
+		from {bottom: -20%;; opacity:0} 
+		to {bottom: 2%;; opacity:1}
+	}
+	.close {
+		position: absolute;
+		right: 6px;
+		top: 6px;
+		width: 40px;
+		height: 40px;
+		color:white;
+		background-color:#dd2929;
+		text-decoration: none;
+		z-index: 999999;
+		display: none;
+		border-radius:3px ;
+			font-size: 40px;
+			text-align:center;
+			font-weight: bold;
+			line-height:100%;
+	}
+	#upl_type_txt{
+		display: block;
+		margin: 20px 10px;
+	}
+	.ok{
+		display: none;
+	}		
+/*Кнопка поднять на верх*/	
+.mbtn{
+	position: fixed;
+	transition: all 0.5s;
+	left:2%;
+	bottom:2%;
+	display:none;
+	width:50px;
+	line-height:50px;
+	border-radius:25px;
+	color:white;
+	background:#dd2929;
+	text-align:center;
+	font-size:45px;
+	text-decoration:none;
+	z-index: 1000;
+}
+.asd_block{
+	display: block;
+}
+
+@media(max-width:1200px){
+	.ClearFix{
+		width: 100%;
+	}
+}
+
+@media(max-width:1000px){
+	.form-inner input[type="submit"],.insert_fl {
+		padding: 1%;
+	}
+	.form-inner{
+		padding: 50px 2%;
+	}
+	.form-inner textarea{
+		height: 400px;
+	}
+	.logo_full{
+		display: none;
+	}
+	.logo_short{
+		display: inline-block;
+	}
+	.insert_fl{
+		display: block;
+	}
+	.left_block{
+		width: 100%;
+		margin: auto;
+	}
+	.right_block{
+		width: 100%;
+		display: none;
+		position: fixed;
+		z-index: 1000;
+		top:0;
+		min-height: 100%;
+		background: white;
+	}
+	.right_block .photos_block{
+		max-height:25vh;
+	}
+	.close,.ok{
+		display: block;
+	}
+	footer{
+		position: relative;
+
+	}
+	.form-left-decoration,
+	.form-right-decoration ,.circle{
+		display: none;
+	}
+}
+@media(max-width:670px){
+	.files_img{
+		max-width: 48%;
+	}
+}
+@media(max-width:400px){
+	.head_txt{
+		display: none;
+	}
+}

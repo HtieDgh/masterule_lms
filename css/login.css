@@ -1,0 +1,119 @@
+@import url("general.css");
+/*============Форма входа==============*/
+.welcome{
+	font-family: 'Francois One', sans-serif;
+	display:flex;
+	flex-direction: row ;
+	justify-content: center;
+	 align-items: center;
+	width:100%;
+	height:100vh;
+}
+	.ComeIn{
+		width:400px;
+	    background-color:rgba(224,224,224,0.95);
+		box-shadow:0 0 30px 5px black;
+		border-radius:15px;
+		border:4px solid #dd2929;
+		 position: relative;
+		 overflow:hidden;
+		 display:block;
+		 margin: auto 0;
+	}
+/*-------Красивый ввод пароля------*/
+.LogIn{
+	text-align: center;
+	width:100%;
+	margin:30px auto;
+}
+.LogInTxt{
+	display:block;
+	margin: 10px 20px 30px;
+	font-size:16px;
+	color:#5f5151;
+}
+
+	/* form starting stylings ------------------------ */
+.group {
+left:50%;
+margin-left:-160px;
+width:320px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.UserIn {
+  font-size: 16px;
+  padding: 10px;
+  display: block;
+  width: 300px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+.UserIn:focus {
+  outline: none;
+}
+/* LABEL ======================================= */
+label {
+  color: #999;
+  font-size: 18px;
+  position: absolute;
+  pointer-events: none;
+  width:auto;
+  left: 10px;
+  top: 12px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+
+/* active state */
+
+.UserIn[type="email"]:invalid ~ label,.UserIn:focus ~ label{
+	color: red;
+	top: -25px;
+}
+.UserIn:valid ~ label{
+	top: -25px;
+	color: green;
+  }
+/* BOTTOM BARS ================================= */
+.bar {
+  position: relative;
+  display: block;
+  width: 320px;
+}
+.bar:before, .bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  position: absolute;
+  background: red;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+.bar:before {
+  left: 50%;
+}
+.bar:after {
+  right: 50%;
+}
+
+/* active state */
+input:focus ~ .bar:before,
+input:focus ~ .bar:after
+{
+  outline: none;
+  width: 50%;
+}
+/*========Красивый ввод пароля Конец========*/
+.Entering{
+	width:100%;
+	display:flex;
+	flex-direction:column;
+	align-content:space-evenly;
+	align-items:center;
+}

@@ -1,0 +1,43 @@
+
+.profile_txt,.profile_info{
+    margin:20px auto;
+}
+.profile_info{
+    text-align: center;
+}
+
+.right_block_profile{
+    width: 300px;
+    margin-left:20px;
+    box-sizing: border-box;
+}
+    .right_block_profile .note{
+        border: 5px solid rgb(124, 161, 43);;
+    }
+.prof_op_page{
+    width: 110px;
+}
+.center_page{
+    width:660px;
+}
+.ch_ava_btn{
+    display: none;
+}
+.w_100{
+    width: 100px;
+}
+.sub_btn{
+    display: block;
+    margin: 5px 0;
+}
+
+
+@media(max-width:1100px){
+    .center_page{
+        width: 100%;
+    }
+    .right_block_profile{
+        width: 100%;
+        margin: 0;
+    }
+}
